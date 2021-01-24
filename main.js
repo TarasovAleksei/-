@@ -9,12 +9,14 @@ const basket = {
 
   renderProducts() {
     let productList = document.querySelector('.products');
-    this.products.forEach((products) => productList.insertAdjacentHTML('beforeend',
-        `<div class="product-item">
+    this.products.forEach(function (products) {
+        return productList.insertAdjacentHTML('beforeend',
+          `<div class="product-item">
         <h3>${products.title}</h3>
         <p>${products.price}</p>
         <button class="by-btn">Добавить в корзину</button>
-      </div>`))
+      </div>`);
+      })
   }
 }
 
